@@ -101,10 +101,10 @@ describe("book.js", function () {
     });
 
     it("should add 20 pages per letter for a different title", function () {
-      var bookTitle = createTitle("The Dragon in the Summer");
+      var bookTitle = createTitle("Dragon in the Summer");
       var bookPageCount = calculatePageCount(bookTitle);
 
-      assert.equal(bookPageCount, 560);
+      assert.equal(bookPageCount, 480);
     });
   });
 
@@ -125,13 +125,13 @@ describe("book.js", function () {
     });
 
     it("should return a different book object", function () {
-      var dragonTitle = createTitle("The Dragon in the Summer");
+      var dragonTitle = createTitle("Dragon in the Summer");
       var dragonCharacter = buildMainCharacter("Dana", 25, "they/them");
       var dragonBook = writeBook(dragonTitle, dragonCharacter, "fantasy");
 
       assert.equal(dragonBook.title, dragonTitle);
       assert.equal(dragonBook.mainCharacter, dragonCharacter);
-      assert.equal(dragonBook.pageCount, 560);
+      assert.equal(dragonBook.pageCount, 480);
       assert.equal(dragonBook.genre, "fantasy");
     });
   });
