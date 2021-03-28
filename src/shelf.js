@@ -48,6 +48,8 @@ function searchShelf(shelf, book){
   // }
 }
 
+//export {searchShelf};
+
 module.exports = {
   shelfBook,
   unshelfBook,
